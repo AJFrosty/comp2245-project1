@@ -1,4 +1,5 @@
 /* Add your CSS to this file */
+
 body {
     margin: 0;
     font-size: 16px;
@@ -12,28 +13,38 @@ body {
 
 /*HEader Content*/
 
-.container {
+header {
+    padding: 20px 0;
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* .container h1{
-    grid-column: 1/2;
-    grid-row: 1;
+header h1 {
+    font-size: 36px;
+    margin: 0;
 }
 
-.container nav{
-    grid-column: 3;
-    grid-row: 1;
-} */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 /*Grid-ify the site*/
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 200px;
 }
 
 
@@ -44,6 +55,22 @@ main {
     grid-row: 1;
 }
 
+.overview-hero .container {
+    display: flex;
+    align-items: center;
+}
+
+.overview-hero-image img {
+    float: left;
+    width: 260px;
+    height: 200px;
+}
+
+.overview-hero-text {
+    float: right;
+
+}
+
 /* Section 2 */
 
 .learn-about {
@@ -51,22 +78,72 @@ main {
     grid-row: 2;
 }
 
+.learn-about .cards {
+    display: flex;
+}
+
+.card img {
+    width: 160px;
+    height: 170px;
+}
+
 /* Section 3 */
 
 .testing {
     grid-column: 1/3;
-    grid-row: 1;
+    grid-row: 3;
+}
+
+.testing .container {
+    display: flex;
+}
+
+.testing-desciption {
+    float: left;
+}
+
+.cta a {
+    float: right;
 }
 
 /* Section 4 */
 
 .stories {
     grid-column: 1/3;
-    grid-row: 1;
+    grid-row: 4;
+}
+
+.stories .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stories article {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: start;
+    gap: 100px;
+}
+
+.stories article img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    grid-column: 1;
+}
+
+.stories .article-body {
+    grid-column: 2;
+    float: right;
 }
 
 /* Section 5 */
 .newsletter {
-    grid-column: 1/3;
-    grid-row: 1;
+    grid-column: 1/4;
+    grid-row: 5;
+    text-align: center;
+}
+
+.newsletter form {
+    display: inline-flex;
 }
